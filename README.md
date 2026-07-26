@@ -1,4 +1,3 @@
-Here is a clean, minimal `README.md` file designed for your project repository:
 
 ```markdown
 # ASCII Rendering Terminal Engine 
