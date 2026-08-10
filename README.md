@@ -10,6 +10,7 @@ A lightweight Python software rendering engine that converts 2D images (`.jpg`, 
 
 * **2D Image Renderer:** 24-bit ANSI Truecolor output with font aspect-ratio correction and perceptual brightness mapping.
 * **3D OBJ Model Viewer:** Custom software rendering pipeline featuring matrix transformations, backface culling, diffuse surface lighting, and Z-buffer depth sorting.
+* **ASCII Banners:** Turn text or images into standalone ASCII art banners, with optional color and border framing.
 * **Interactive Controls:** Smooth non-blocking WASD controls to rotate, zoom, auto-spin, and cycle color shaders on the fly.
 
 ---
@@ -17,7 +18,7 @@ A lightweight Python software rendering engine that converts 2D images (`.jpg`, 
 ## Prerequisites & Installation
 
 ```bash
-pip install numpy pillow
+pip install numpy pillow pyfiglet
 
 ```
 
@@ -55,6 +56,24 @@ py image2ascii.py assets/your_image.jpg
 py model2ascii.py assets/your_model.obj
 
 ```
+
+### 3. ASCII Art Banners (Text or Image)
+
+Generate a standalone banner from text using a FIGlet font:
+
+```cmd
+py banner.py text "HELLO WORLD" --font slant --color cyan --border
+
+```
+
+Generate a banner from an image:
+
+```cmd
+py banner.py image assets/tiger.jpg --width 100 --border
+
+```
+
+*(Add `--nocolor` for monochrome image banners. Run `py banner.py text --list-fonts` to see all available FIGlet fonts. `--border` works for both text and image banners.)*
 
 ---
 
